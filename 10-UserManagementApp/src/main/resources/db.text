@@ -1,0 +1,30 @@
+create table USER_DTLS(
+USER_ID int,FIRST_NAME varchar(255),LAST_NAME varchar(255),
+USER_EMAIL varchar(255),PHONE_NUMBER long,dateOfBirth DATE,
+GENDER varchar(25),COUNTRY varchar(255),STATE varchar(255),
+CITY varchar(255),password varchar(255),ACCOUNTSTATUS varchar(255)
+);
+
+create table COUNTRY_MASTER(COUNTRY_ID integer,COUNTRY_NAME varchar(255));
+
+create table STATE_MASTER(STATE_ID integer,STATE_NAME varchar(255),COUNTRY_ID integer);
+
+create table CITY_MASTER(CITY_ID integer,CITY_NAME varchar(255),STATE_ID int,COUNTRY_ID integer);
+
+//-----------------register ------------------------------------------------
+
+localhost:8080/register
+
+
+{
+    "firstName":"anil",
+    "lastName":"patil",
+    "email":"anilrspatil15@gmail.com",
+    "userMobileNo":"8686212067",
+    "dob":"20/04/1993",
+    "gender":"Male",
+    "countryID":"91",
+     "stateID":"27",
+     "cityID":"10"
+}
+
